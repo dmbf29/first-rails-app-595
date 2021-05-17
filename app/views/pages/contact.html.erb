@@ -1,0 +1,17 @@
+<h1>Contact</h1>
+<%# <a href="/">Home</a> %>
+<%#= link_to 'words to show', prefix_path  %>
+<%# <form action="/path" method="VERB"> %>
+<form action="/contact" method="POST">
+  <div class="form-group">
+    <input type="text" name="member" class="form-control" value="<%= params[:member] %>">
+  </div>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="submit" class='btn btn-primary'>
+</form>
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ul>
+<%= link_to "Home", root_path %>

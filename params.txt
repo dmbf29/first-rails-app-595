@@ -1,0 +1,16 @@
+3 WAYS TO GET PARAMS
+
+1. Inside the URL query string
+https://www.google.com/search?q=le+wagon
+
+params
+{q: 'le wagon'}
+
+2. Inside the body of a POST request
+params (not in the URL)
+{name: 'le wagon'}
+
+3. Dynamic URL
+get '/rooms/:id', to: 'rooms#show', as: :room
+https://www.airbnb.com/rooms/49613866
+params[:id]
